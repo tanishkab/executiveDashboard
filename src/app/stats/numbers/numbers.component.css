@@ -1,3 +1,11 @@
-.bold{
+.bold {
   font-weight: bold !important;
+}
+
+sup {
+  font-size: 1rem !important;
+}
+
+small {
+  font-size: 0.8rem !important;
 }

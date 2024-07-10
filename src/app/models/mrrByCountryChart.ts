@@ -11,7 +11,6 @@ export class MRRStatsByCountryChart extends Chart {
     this.axisX = {
       ...this.axisX,
       prefix:'$',
-      interval: 10,
       intervalType: "number",
       labelFormatter:function (e: any) {
         return e.value;

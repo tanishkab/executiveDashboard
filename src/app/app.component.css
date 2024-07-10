@@ -1,18 +1,60 @@
 .box {
   background-color: white;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 10px 2px 10px;
 }
 
-.stats{
-  height: 25vh;
+.dateRange {
+  padding: 5px 10px 2px 10px;
 }
 
-.statsData{
+.statsData {
   display: block;
   height: 80%;
 }
 
-.graphs{
-  height: 50vh;  
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping of flex items */
+  justify-content: space-between; /* Adjust spacing between items */
+}
+
+.stats {
+  .flex-item {
+    height: 25vh;
+    width: calc(25% - 10px); /* Adjust width for 4 items per row*/
+    margin-bottom: 20px; /* Add margin between items */
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust breakpoint for medium devices */
+    .flex-item {
+      height: 15vh;
+      width: calc(50% - 10px); /* Two items per row */
+    }
+  }
+
+  @media (max-width: 576px) {
+    /* Adjust breakpoint for small devices */
+    .flex-item {
+      height: 15vh;
+      width: calc(100% - 10px); /* Two items per row */
+    }
+  }
+}
+
+.graphs {
+  .flex-item {
+    height: 45vh;
+    width: calc(50% - 10px); /* Adjust width for 2 items per row*/
+    margin-bottom: 20px; /* Add margin between items */
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust breakpoint for medium devices */
+    .flex-item {
+      height: 25vh;
+      width: calc(100% - 10px); /* One item per row */
+    }
+  }
 }
