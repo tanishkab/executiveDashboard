@@ -1,0 +1,35 @@
+<div class="m-3">
+  <h5>Executive Dashboard</h5>
+  <div class="box" style="width: 40rem;">
+    <small class="text-secondary">Auto date range</small>
+    <app-date-range (datesUpdated)="datesUpdated($event)" [selectedDate]="selectedDate"></app-date-range>
+  </div>
+  <div class="d-flex my-4 stats">
+    <div class="col mr-2 box">
+      <b class="text-secondary">New Wins</b>
+      <stats-numbers class="statsData" [data]="stats.wins" [dataUpBy]="stats.winsUpBy"></stats-numbers>
+    </div>
+    <div class="col mx-2 box">
+      <b class="text-secondary">Travel: Win Rate</b>
+      <stats-numbers class="statsData" [data]="stats.trialRate" [dataUpBy]="stats.trialRateUpBy" [isPercent]="true"></stats-numbers>
+    </div>
+    <div class="col mx-2 box">
+      <b class="text-secondary">New MRR</b>
+      <stats-numbers class="statsData" [data]="stats.mrr" [dataUpBy]="stats.mrrUpBy" [isCurrency]="true"></stats-numbers>
+    </div>
+    <div class="col ml-2 box">
+      <b class="text-secondary">Page Views</b>
+      <stats-charts class="statsData" [chartId]="1" [chart]="pageView"></stats-charts>
+    </div>
+  </div>
+
+  <div class="d-flex my-4 graphs">
+    <div class="col mr-2 box">
+      <b class="text-secondary">MRR Stats by Country</b>
+      <stats-charts class="statsData" [chartId]="2" [chart]="mrrStatsByCountry"></stats-charts>
+    </div>
+    <div class="col mx-2 box">
+      <b class="text-secondary">MRR</b>
+      <stats-charts class="statsData" [chartId]="3" [chart]="mrr"></stats-charts>
+    </div>
+  </div>

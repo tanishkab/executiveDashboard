@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center align-items-center h-100 flex-column">
+  <h2 class="bold">
+    <sup class="fs-5" *ngIf="isCurrency">$</sup>
+    {{data | number}}
+    <sup class="fs-5" *ngIf="isPercent">%</sup>
+  </h2>
+  <h4 class="text-success">
+    <i class="las la-arrow-up"></i>{{dataUpBy}}%
+  </h4>
+  <p class="text-secondary">vs previous 30 days</p>
+</div>

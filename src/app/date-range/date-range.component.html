@@ -1,0 +1,7 @@
+<div class="d-flex align-items-center col-xs-12 col-12 col-md-4 form-group mb-3 w-50">
+  <i class="las la-calendar fs-3"></i>
+  <input type="text" class="form-control" ngxDaterangepickerMd [ngModel]="selectedDate"
+    [locale]="{format: 'DD-MMM-YY'}" [ranges]="ranges" [showRangeLabelOnInput]="true"
+    (datesUpdated)="datesUpdated.next($event)" [alwaysShowCalendars]="true" 
+    [autoApply]="true" name="daterange" />
+</div>

@@ -1,0 +1,1 @@
+export const ChartColor = ["#ffc743", "#ffa026", "#74b266", "#719ad3"]
